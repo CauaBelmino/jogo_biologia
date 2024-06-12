@@ -8,8 +8,8 @@ function startGame() {
     p1Sun = p1CO2 = p1Water = 0;
     p2Sun = p2CO2 = p2Water = 0;
     updateScores();
-    document.getElementById('p1-plant').style.backgroundImage = 'planta_pequena.png';
-    document.getElementById('p2-plant').style.backgroundImage = 'planta_pequena.png';
+    document.getElementById('p1-plant').style.backgroundImage = '';
+    document.getElementById('p2-plant').style.backgroundImage = '';
     bindElementClicks();
 }
 
@@ -55,9 +55,13 @@ function updateScores() {
 function checkPlantGrowth() {
     if (p1Sun >= 3 && p1Water >= 3) {
         document.getElementById('p1-plant').style.backgroundImage = 'url("images/medium_plant.png")';
+    } else {
+        document.getElementById('p1-plant').style.backgroundImage = 'url("images/small_plant.png")';
     }
     if (p2Sun >= 3 && p2Water >= 3) {
         document.getElementById('p2-plant').style.backgroundImage = 'url("images/medium_plant.png")';
+    } else {
+        document.getElementById('p2-plant').style.backgroundImage = 'url("images/small_plant.png")';
     }
 }
 
