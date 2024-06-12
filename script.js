@@ -8,8 +8,8 @@ function startGame() {
     p1Sun = p1CO2 = p1Water = 0;
     p2Sun = p2CO2 = p2Water = 0;
     updateScores();
-    document.getElementById('p1-plant').style.backgroundImage = '';
-    document.getElementById('p2-plant').style.backgroundImage = '';
+    document.getElementById('p1-plant').style.backgroundImage = 'planta_pequena.png';
+    document.getElementById('p2-plant').style.backgroundImage = 'planta_pequena.png';
     bindElementClicks();
 }
 
