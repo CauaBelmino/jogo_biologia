@@ -54,27 +54,27 @@ function updateScores() {
 
 function checkPlantGrowth() {
     if (p1Sun >= 3 && p1Water >= 3) {
-        document.getElementById('p1-plant').style.backgroundImage = 'url("images/medium_plant.png")';
+        document.getElementById('p1-plant').style.backgroundImage = 'url("medium_plant.png")';
     } else {
-        document.getElementById('p1-plant').style.backgroundImage = 'url("images/small_plant.png")';
+        document.getElementById('p1-plant').style.backgroundImage = 'url("small_plant.png")';
     }
     if (p2Sun >= 3 && p2Water >= 3) {
-        document.getElementById('p2-plant').style.backgroundImage = 'url("images/medium_plant.png")';
+        document.getElementById('p2-plant').style.backgroundImage = 'url("medium_plant.png")';
     } else {
-        document.getElementById('p2-plant').style.backgroundImage = 'url("images/small_plant.png")';
+        document.getElementById('p2-plant').style.backgroundImage = 'url("small_plant.png")';
     }
 }
 
 function checkWinCondition() {
     if (p1Sun >= 6 && p1CO2 >= 6 && p1Water >= 6) {
         document.getElementById('result').innerText = 'Jogador 1 Venceu!';
-        document.getElementById('p1-plant').style.backgroundImage = 'url("images/grown_plant.png")';
-        document.getElementById('p2-plant').style.backgroundImage = 'url("images/wilted_plant.png")';
+        document.getElementById('p1-plant').style.backgroundImage = 'url("grown_plant.png")';
+        document.getElementById('p2-plant').style.backgroundImage = 'url("wilted_plant.png")';
         unbindElementClicks();
     } else if (p2Sun >= 6 && p2CO2 >= 6 && p2Water >= 6) {
         document.getElementById('result').innerText = 'Jogador 2 Venceu!';
-        document.getElementById('p2-plant').style.backgroundImage = 'url("images/grown_plant.png")';
-        document.getElementById('p1-plant').style.backgroundImage = 'url("images/wilted_plant.png")';
+        document.getElementById('p2-plant').style.backgroundImage = 'url("grown_plant.png")';
+        document.getElementById('p1-plant').style.backgroundImage = 'url("wilted_plant.png")';
         unbindElementClicks();
     }
 }
